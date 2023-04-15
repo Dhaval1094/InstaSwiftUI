@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel: HomeVM
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            NavigationStack {
+                List(viewModel.photos, id: \.self) { item in
+                    GridLayoutCell(
+                        item: item
+                    )
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(.init())
+                    .buttonStyle(PlainButtonStyle())
+                    .id(item.id)
+                }
+                .listStyle(PlainListStyle())
+            }
+            .navigationBarBackButtonHidden(true)
+        }.onAppear {
+            viewModel.getSearchList()
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeVM())
     }
 }

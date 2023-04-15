@@ -20,9 +20,18 @@
 		98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DB629E9EE8F00BEBEDA /* LoginVM.swift */; };
 		98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DB929E9EEB000BEBEDA /* HomeVM.swift */; };
 		98D76DBD29E9EECD00BEBEDA /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DBC29E9EECD00BEBEDA /* ProfileVM.swift */; };
+		98D76DDE29EAB1B500BEBEDA /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DDD29EAB1B500BEBEDA /* AlertView.swift */; };
+		98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DDF29EAC48500BEBEDA /* APIClient.swift */; };
+		98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */; };
+		98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */; };
+		98D76DEC29EAE48C00BEBEDA /* GridLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */; };
+		E3CE2AE1885DB77E6E3BE8C9 /* Pods_InstaSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		98D76D9629E9E33100BEBEDA /* InstaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSwiftUIApp.swift; sourceTree = "<group>"; };
 		98D76D9D29E9E33300BEBEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +46,11 @@
 		98D76DB629E9EE8F00BEBEDA /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		98D76DB929E9EEB000BEBEDA /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		98D76DBC29E9EECD00BEBEDA /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		98D76DDD29EAB1B500BEBEDA /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		98D76DDF29EAC48500BEBEDA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRetry.swift; sourceTree = "<group>"; };
+		98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +58,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CE2AE1885DB77E6E3BE8C9 /* Pods_InstaSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11E98D09C173A77A15BDCF02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A1FC0CA0F33CF630EB0243D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */,
+				5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		98D76D8D29E9E33100BEBEDA = {
 			isa = PBXGroup;
 			children = (
 				98D76D9829E9E33100BEBEDA /* InstaSwiftUI */,
 				98D76D9729E9E33100BEBEDA /* Products */,
+				8A1FC0CA0F33CF630EB0243D /* Pods */,
+				11E98D09C173A77A15BDCF02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */,
-				98D76DA929E9E3F500BEBEDA /* Constants.swift */,
+				98D76DDC29EAB19100BEBEDA /* Utility */,
 				98D76DB829E9EE9500BEBEDA /* Login */,
 				98D76DBB29E9EEB600BEBEDA /* Home */,
 				98D76DBE29E9EED200BEBEDA /* Profile */,
+				98D76DE329EAD3D000BEBEDA /* Response */,
+				98D76DEA29EAE46500BEBEDA /* Layout */,
 				98D76DB529E9EA8500BEBEDA /* NavigationComponent */,
 				98D76D9D29E9E33300BEBEDA /* Assets.xcassets */,
 				98D76D9F29E9E33300BEBEDA /* Preview Content */,
@@ -126,6 +162,33 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		98D76DDC29EAB19100BEBEDA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				98D76DA929E9E3F500BEBEDA /* Constants.swift */,
+				98D76DDD29EAB1B500BEBEDA /* AlertView.swift */,
+				98D76DDF29EAC48500BEBEDA /* APIClient.swift */,
+				98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		98D76DE329EAD3D000BEBEDA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		98D76DEA29EAE46500BEBEDA /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D76DA429E9E33300BEBEDA /* Build configuration list for PBXNativeTarget "InstaSwiftUI" */;
 			buildPhases = (
+				1A1DFC04BA0B314BA4DDC5A8 /* [CP] Check Pods Manifest.lock */,
 				98D76D9229E9E33100BEBEDA /* Sources */,
 				98D76D9329E9E33100BEBEDA /* Frameworks */,
 				98D76D9429E9E33100BEBEDA /* Resources */,
+				9A403A60612C05264FDF8854 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +256,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A1DFC04BA0B314BA4DDC5A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A403A60612C05264FDF8854 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		98D76D9229E9E33100BEBEDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,11 +306,16 @@
 				98D76DAF29E9E3F600BEBEDA /* Constants.swift in Sources */,
 				98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */,
 				98D76DB129E9E3F600BEBEDA /* LoginView.swift in Sources */,
+				98D76DEC29EAE48C00BEBEDA /* GridLayoutCell.swift in Sources */,
+				98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */,
 				98D76DAE29E9E3F600BEBEDA /* Coordinator.swift in Sources */,
 				98D76DAD29E9E3F600BEBEDA /* ProfileView.swift in Sources */,
+				98D76DDE29EAB1B500BEBEDA /* AlertView.swift in Sources */,
 				98D76DB229E9E3F600BEBEDA /* HomeView.swift in Sources */,
 				98D76DBD29E9EECD00BEBEDA /* ProfileVM.swift in Sources */,
 				98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */,
+				98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */,
+				98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */,
 				98D76DB029E9E3F600BEBEDA /* RootCoordinator.swift in Sources */,
 				98D76D9A29E9E33100BEBEDA /* InstaSwiftUIApp.swift in Sources */,
 				98D76DB429E9E8E000BEBEDA /* SceneDelegate.swift in Sources */,
@@ -329,6 +441,7 @@
 		};
 		98D76DA529E9E33300BEBEDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -345,7 +458,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +475,7 @@
 		};
 		98D76DA629E9E33300BEBEDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,7 +492,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,6 @@
+framework module Pods_InstaSwiftUI {
+  umbrella header "Pods-InstaSwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
