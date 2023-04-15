@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
  
 final class RootCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]
-    var parentCoordinator: Coordinator?
+    var childCoordinators: [Coordinator] = []
+    weak var parentCoordinator: Coordinator?
     let navigationController: UINavigationController
     var root: UIViewController {
         return navigationController
@@ -25,5 +25,9 @@ final class RootCoordinator: Coordinator {
         navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
     }
-    
+    func start() {
+        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+            return
+        }
+    }
 }
