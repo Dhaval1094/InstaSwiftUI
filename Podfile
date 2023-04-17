@@ -6,7 +6,5 @@ target 'InstaSwiftUI' do
   use_frameworks!
 
   # Pods for InstaSwiftUI
-
 pod 'Alamofire'
-
 end

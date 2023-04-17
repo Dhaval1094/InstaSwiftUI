@@ -2,18 +2,19 @@
 //  APIClient.swift
 //  InstaSwiftUI
 //
-//  Created by Gwl on 15/04/23.
+//  Created by Dhaval Trivedi on 15/04/23.
 //
 
 import Foundation
 import Alamofire
 
 class APIClient {
-    static let shared = APIClient()
+    static let shared = APIClient(searchString: "People") // default search string
 // https://api.pexels.com/v1/search?query=people
     let baseURL = "https://api.pexels.com/v1/"
-    private init() {
-        
+    var searchString = ""
+    private init(searchString: String) {
+        self.searchString = searchString
     }
     private enum EndPoint {
         case search
@@ -52,10 +53,17 @@ class APIClient {
         return baseURL + endPoint.identifier
     }
 }
-
 extension APIClient {
-    func callSearch(completion: @escaping (SearchResponse?, Error?) -> Void) {
-        let parameters = ["query": "people"]
+    func callSearch(
+        page: Int,
+        perPage: Int,
+        completion: @escaping (SearchResponse?, Error?) -> Void
+    ) {
+        let parameters = [
+            "query": searchString,
+            "page": page,
+            "per_page": perPage
+        ] as [String : Any]
         sessionManager.request(
             makeUrl(endPoint: .search),
             method: .get,
@@ -68,7 +76,8 @@ extension APIClient {
                 return
             }
             do {
-                let searchResponse = try JSONDecoder().decode(SearchResponse.self, from: response.data ?? Data())
+                let searchResponse = try JSONDecoder()
+                    .decode(SearchResponse.self, from: response.data ?? Data())
                 completion(searchResponse, nil)
             } catch {
                 completion(nil, error)

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98B7390729ED74B800A4CA33 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390329ED74B800A4CA33 /* ImageCache.swift */; };
+		98B7390829ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390429ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift */; };
+		98B7390929ED74B800A4CA33 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390529ED74B800A4CA33 /* AsyncImage.swift */; };
+		98B7390A29ED74B800A4CA33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390629ED74B800A4CA33 /* ImageLoader.swift */; };
 		98D76D9A29E9E33100BEBEDA /* InstaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */; };
 		98D76D9E29E9E33300BEBEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D76D9D29E9E33300BEBEDA /* Assets.xcassets */; };
 		98D76DA129E9E33300BEBEDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D76DA029E9E33300BEBEDA /* Preview Assets.xcassets */; };
@@ -24,7 +28,6 @@
 		98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DDF29EAC48500BEBEDA /* APIClient.swift */; };
 		98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */; };
 		98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */; };
-		98D76DEC29EAE48C00BEBEDA /* GridLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */; };
 		E3CE2AE1885DB77E6E3BE8C9 /* Pods_InstaSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,10 @@
 		32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		98B7390329ED74B800A4CA33 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		98B7390429ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		98B7390529ED74B800A4CA33 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		98B7390629ED74B800A4CA33 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		98D76D9629E9E33100BEBEDA /* InstaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSwiftUIApp.swift; sourceTree = "<group>"; };
 		98D76D9D29E9E33300BEBEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +57,6 @@
 		98D76DDF29EAC48500BEBEDA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRetry.swift; sourceTree = "<group>"; };
 		98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		98B7390229ED749C00A4CA33 /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				98B7390529ED74B800A4CA33 /* AsyncImage.swift */,
+				98B7390429ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift */,
+				98B7390329ED74B800A4CA33 /* ImageCache.swift */,
+				98B7390629ED74B800A4CA33 /* ImageLoader.swift */,
+			);
+			path = AsyncImage;
+			sourceTree = "<group>";
+		};
 		98D76D8D29E9E33100BEBEDA = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +126,6 @@
 				98D76DBB29E9EEB600BEBEDA /* Home */,
 				98D76DBE29E9EED200BEBEDA /* Profile */,
 				98D76DE329EAD3D000BEBEDA /* Response */,
-				98D76DEA29EAE46500BEBEDA /* Layout */,
 				98D76DB529E9EA8500BEBEDA /* NavigationComponent */,
 				98D76D9D29E9E33300BEBEDA /* Assets.xcassets */,
 				98D76D9F29E9E33300BEBEDA /* Preview Content */,
@@ -169,6 +185,7 @@
 				98D76DDD29EAB1B500BEBEDA /* AlertView.swift */,
 				98D76DDF29EAC48500BEBEDA /* APIClient.swift */,
 				98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */,
+				98B7390229ED749C00A4CA33 /* AsyncImage */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -179,14 +196,6 @@
 				98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */,
 			);
 			path = Response;
-			sourceTree = "<group>";
-		};
-		98D76DEA29EAE46500BEBEDA /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				98D76DEB29EAE48C00BEBEDA /* GridLayoutCell.swift */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +216,8 @@
 			dependencies = (
 			);
 			name = InstaSwiftUI;
+			packageProductDependencies = (
+			);
 			productName = InstaSwiftUI;
 			productReference = 98D76D9629E9E33100BEBEDA /* InstaSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +246,8 @@
 				Base,
 			);
 			mainGroup = 98D76D8D29E9E33100BEBEDA;
+			packageReferences = (
+			);
 			productRefGroup = 98D76D9729E9E33100BEBEDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -305,15 +318,18 @@
 			files = (
 				98D76DAF29E9E3F600BEBEDA /* Constants.swift in Sources */,
 				98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */,
+				98B7390729ED74B800A4CA33 /* ImageCache.swift in Sources */,
 				98D76DB129E9E3F600BEBEDA /* LoginView.swift in Sources */,
-				98D76DEC29EAE48C00BEBEDA /* GridLayoutCell.swift in Sources */,
 				98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */,
 				98D76DAE29E9E3F600BEBEDA /* Coordinator.swift in Sources */,
 				98D76DAD29E9E3F600BEBEDA /* ProfileView.swift in Sources */,
 				98D76DDE29EAB1B500BEBEDA /* AlertView.swift in Sources */,
 				98D76DB229E9E3F600BEBEDA /* HomeView.swift in Sources */,
+				98B7390A29ED74B800A4CA33 /* ImageLoader.swift in Sources */,
 				98D76DBD29E9EECD00BEBEDA /* ProfileVM.swift in Sources */,
+				98B7390929ED74B800A4CA33 /* AsyncImage.swift in Sources */,
 				98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */,
+				98B7390829ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift in Sources */,
 				98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */,
 				98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */,
 				98D76DB029E9E3F600BEBEDA /* RootCoordinator.swift in Sources */,

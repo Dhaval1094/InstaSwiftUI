@@ -2,7 +2,7 @@
 //  InstaSwiftUIApp.swift
 //  InstaSwiftUI
 //
-//  Created by Gwl on 15/04/23.
+//  Created by Dhaval Trivedi on 15/04/23.
 //
 
 import SwiftUI

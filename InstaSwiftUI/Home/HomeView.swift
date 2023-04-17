@@ -9,23 +9,58 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeVM
+    @State private var searchText = ""
+    var columns = [
+        GridItem(spacing: 0),
+        GridItem(spacing: 0),
+        GridItem(spacing: 0)
+    ]
     var body: some View {
         ZStack {
             NavigationStack {
-                List(viewModel.photos, id: \.self) { item in
-                    GridLayoutCell(
-                        item: item
-                    )
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(.init())
-                    .buttonStyle(PlainButtonStyle())
-                    .id(item.id)
+                GeometryReader { geo in
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 0) {
+                            let imgRatio = geo.size.width / 3.1
+                            ForEach(viewModel.photos, id: \.id) { item in
+                                AsyncImage(
+                                    url: URL(string: item.src?.small ?? "")!,
+                                    placeholder: {
+                                        Image("placeholder")
+                                            .resizable()
+                                            .frame(width: imgRatio, height: imgRatio)
+                                    },
+                                    image: {
+                                        Image(uiImage: $0)
+                                            .resizable()
+                                    }
+                                )
+                                .frame(width: imgRatio, height: imgRatio)
+                                .aspectRatio(contentMode: .fill)
+                            }
+                            .padding(2.5)
+                        }
+                        .navigationTitle(APIClient.shared.searchString)
+                    }
+                    .refreshable {
+                        viewModel.loadMore()
+                    }
                 }
-                .listStyle(PlainListStyle())
+                .navigationBarBackButtonHidden(true)
+                .searchable(
+                    text: $searchText,
+                    placement: .toolbar,
+                    prompt: Text("Search...")
+                )
+                .onSubmit(of: .search) {
+                    APIClient.shared.searchString = searchText
+                    viewModel.reset()
+                    viewModel.getSearchList()
+                }
             }
-            .navigationBarBackButtonHidden(true)
-        }.onAppear {
-            viewModel.getSearchList()
+            .onAppear {
+                viewModel.getSearchList()
+            }
         }
     }
 }

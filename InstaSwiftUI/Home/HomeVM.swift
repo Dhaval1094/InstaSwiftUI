@@ -2,7 +2,7 @@
 //  HomeVM.swift
 //  InstaSwiftUI
 //
-//  Created by Gwl on 15/04/23.
+//  Created by Dhaval Trivedi on 15/04/23.
 //
 
 import Foundation
@@ -10,8 +10,13 @@ import Foundation
 class HomeVM: ObservableObject {
     @Published var searchResponse: SearchResponse?
     @Published var photos: [Photo] = []
-    func getSearchList() {
-        APIClient.shared.callSearch { searchResponse, error in
+    var lastPage = 0
+    func getSearchList(page: Int = 1, perPage: Int = 40) {
+        APIClient.shared.callSearch (
+            page: page, perPage:
+                perPage
+        ) { searchResponse, error in
+            self.lastPage = page
             guard error == nil else {
                 return
             }
@@ -22,7 +27,16 @@ class HomeVM: ObservableObject {
             guard let photos = response.photos else {
                 return
             }
-            self.photos = photos
+            self.photos.append(contentsOf: photos)
         }
+    }
+    func reset() {
+        lastPage = 1
+        searchResponse = nil
+        photos.removeAll()
+    }
+    func loadMore() {
+        lastPage += 1
+        getSearchList(page: lastPage)
     }
 }
