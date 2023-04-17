@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel: HomeVM
     @State private var searchText = ""
+    @State private var offset = CGFloat.zero
     var columns = [
         GridItem(spacing: 0),
         GridItem(spacing: 0),
@@ -40,28 +41,40 @@ struct HomeView: View {
                             }
                             .padding(2.5)
                         }
+                        .background(GeometryReader {
+                            Color.clear.preference(key: ViewOffsetKey.self,
+                                                   value: -$0.frame(in: .named("scroll")).origin.y)
+                        })
+                        .onPreferenceChange(ViewOffsetKey.self) { print("offset >> \($0)") }
                         .navigationTitle(APIClient.shared.searchString)
                     }
                     .refreshable {
                         viewModel.loadMore()
                     }
+                    .navigationBarBackButtonHidden(true)
+                    .searchable(
+                        text: $searchText,
+                        placement: .toolbar,
+                        prompt: Text("Search...")
+                    )
+                    .onSubmit(of: .search) {
+                        APIClient.shared.searchString = searchText
+                        viewModel.reset()
+                        viewModel.getSearchList()
+                    }
                 }
-                .navigationBarBackButtonHidden(true)
-                .searchable(
-                    text: $searchText,
-                    placement: .toolbar,
-                    prompt: Text("Search...")
-                )
-                .onSubmit(of: .search) {
-                    APIClient.shared.searchString = searchText
-                    viewModel.reset()
+                .onAppear {
                     viewModel.getSearchList()
                 }
             }
-            .onAppear {
-                viewModel.getSearchList()
-            }
         }
+    }
+}
+struct ViewOffsetKey: PreferenceKey {
+    typealias Value = CGFloat
+    static var defaultValue = CGFloat.zero
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value += nextValue()
     }
 }
 
