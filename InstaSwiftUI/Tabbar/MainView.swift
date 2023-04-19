@@ -2,7 +2,7 @@
 //  MainView.swift
 //  InstaSwiftUI
 //
-//  Created by Gwl on 19/04/23.
+//  Created by Dhaval Trivedi on 19/04/23.
 //
 
 import SwiftUI
@@ -12,12 +12,15 @@ struct MainView: View {
         TabView {
             HomeView(viewModel: HomeVM())
                 .tabItem {
-                    Label("Home", systemImage: "list.dash")
+                    Label("Home", systemImage: "house")
                 }
-
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "square.and.pencil")
+                    Label("Profile", systemImage: "person.text.rectangle")
+                }
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
                 }
         }
         .navigationBarBackButtonHidden(true)
