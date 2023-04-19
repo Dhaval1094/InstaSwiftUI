@@ -117,7 +117,7 @@ struct LoginView: View {
                             }
                         }
                         .navigationDestination(isPresented: $isSignIn) {
-                            HomeView(viewModel: HomeVM())
+                            MainView()                            
                         }
                     Spacer()
                 }

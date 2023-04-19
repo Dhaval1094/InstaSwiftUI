@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class HomeVM: ObservableObject {
     @Published var searchResponse: SearchResponse?
@@ -38,5 +39,27 @@ class HomeVM: ObservableObject {
     func loadMore() {
         lastPage += 1
         getSearchList(page: lastPage)
+    }
+    func isLast(item: Photo) -> Bool {
+        guard let lastPhotoId = photos.last?.id,
+              let itemId = item.id else {
+            return false
+        }
+        return lastPhotoId == itemId
+    }
+    func searchAction(text: String = "") {
+        APIClient.shared.searchString = text
+        reset()
+        getSearchList()
+    }
+    func refresh() {
+        searchAction()
+    }
+    func columns(count: Int) -> [GridItem] {
+        var grids = [GridItem]()
+        for _ in 0...count - 1 {
+            grids.append(GridItem(spacing: 0))
+        }
+        return grids
     }
 }

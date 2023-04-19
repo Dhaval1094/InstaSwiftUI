@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		989A27A929F0034900E3FBC9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27A829F0034900E3FBC9 /* Extension.swift */; };
+		989A27AC29F0408E00E3FBC9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27AB29F0408E00E3FBC9 /* MainView.swift */; };
 		98B7390729ED74B800A4CA33 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390329ED74B800A4CA33 /* ImageCache.swift */; };
 		98B7390829ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390429ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift */; };
 		98B7390929ED74B800A4CA33 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7390529ED74B800A4CA33 /* AsyncImage.swift */; };
@@ -35,6 +37,8 @@
 		32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		989A27A829F0034900E3FBC9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		989A27AB29F0408E00E3FBC9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		98B7390329ED74B800A4CA33 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		98B7390429ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
 		98B7390529ED74B800A4CA33 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		989A27AA29F0407900E3FBC9 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				989A27AB29F0408E00E3FBC9 /* MainView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		98B7390229ED749C00A4CA33 /* AsyncImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */,
+				989A27AA29F0407900E3FBC9 /* Tabbar */,
 				98D76DDC29EAB19100BEBEDA /* Utility */,
 				98D76DB829E9EE9500BEBEDA /* Login */,
 				98D76DBB29E9EEB600BEBEDA /* Home */,
@@ -182,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				98D76DA929E9E3F500BEBEDA /* Constants.swift */,
+				989A27A829F0034900E3FBC9 /* Extension.swift */,
 				98D76DDD29EAB1B500BEBEDA /* AlertView.swift */,
 				98D76DDF29EAC48500BEBEDA /* APIClient.swift */,
 				98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */,
@@ -317,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D76DAF29E9E3F600BEBEDA /* Constants.swift in Sources */,
+				989A27AC29F0408E00E3FBC9 /* MainView.swift in Sources */,
 				98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */,
 				98B7390729ED74B800A4CA33 /* ImageCache.swift in Sources */,
 				98D76DB129E9E3F600BEBEDA /* LoginView.swift in Sources */,
@@ -331,6 +346,7 @@
 				98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */,
 				98B7390829ED74B800A4CA33 /* EnvironmentValues+ImageCache.swift in Sources */,
 				98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */,
+				989A27A929F0034900E3FBC9 /* Extension.swift in Sources */,
 				98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */,
 				98D76DB029E9E3F600BEBEDA /* RootCoordinator.swift in Sources */,
 				98D76D9A29E9E33100BEBEDA /* InstaSwiftUIApp.swift in Sources */,
