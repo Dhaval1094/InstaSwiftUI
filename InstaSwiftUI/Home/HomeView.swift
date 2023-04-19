@@ -10,33 +10,36 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel: HomeVM
     @State private var searchText = ""
-    var columns = [
-        GridItem(spacing: 0),
-        GridItem(spacing: 0),
-        GridItem(spacing: 0)
-    ]
+    @State private var offset = CGFloat.zero
     var body: some View {
         ZStack {
             NavigationStack {
                 GeometryReader { geo in
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 0) {
+                        LazyVGrid(columns: viewModel.columns(count: 3), spacing: 0) {
                             let imgRatio = geo.size.width / 3.1
                             ForEach(viewModel.photos, id: \.id) { item in
-                                AsyncImage(
-                                    url: URL(string: item.src?.small ?? "")!,
-                                    placeholder: {
-                                        Image("placeholder")
-                                            .resizable()
-                                            .frame(width: imgRatio, height: imgRatio)
-                                    },
-                                    image: {
-                                        Image(uiImage: $0)
-                                            .resizable()
+                                AsyncImage(url: URL(string: item.src?.small ?? "")!) { phase in
+                                    switch phase {
+                                        case .empty, .failure:
+                                            PlaceHolderView(imgRatio: imgRatio)
+                                        case .success(let image):
+                                            image.resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: imgRatio, height: imgRatio)
+                                                .contentShape(Rectangle())
+                                                .clipped()
+                                        @unknown default:
+                                            EmptyView()
                                     }
-                                )
-                                .frame(width: imgRatio, height: imgRatio)
-                                .aspectRatio(contentMode: .fill)
+                                }
+                                .padding(.top, 1.0)
+                                if viewModel.isLast(item: item) {
+                                    LoadMoreView()
+                                        .onAppear {
+                                            viewModel.loadMore()
+                                        }
+                                }
                             }
                             .padding(2.5)
                         }
@@ -46,20 +49,17 @@ struct HomeView: View {
                         viewModel.loadMore()
                     }
                 }
-                .navigationBarBackButtonHidden(true)
                 .searchable(
                     text: $searchText,
-                    placement: .toolbar,
+                    placement: .navigationBarDrawer(displayMode: .always),
                     prompt: Text("Search...")
                 )
                 .onSubmit(of: .search) {
-                    APIClient.shared.searchString = searchText
-                    viewModel.reset()
+                    viewModel.searchAction(text: searchText)
+                }
+                .onAppear {
                     viewModel.getSearchList()
                 }
-            }
-            .onAppear {
-                viewModel.getSearchList()
             }
         }
     }
@@ -68,5 +68,11 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(viewModel: HomeVM())
+    }
+}
+
+struct LoadMoreView: View {
+    var body: some View {
+        VStack {}
     }
 }
