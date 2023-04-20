@@ -10,9 +10,11 @@ import SwiftUI
 struct TabBarView: View {
     @State private var isNavigationBarHidden = false
     @State private var searchText = ""
+    @FocusState private var searchFocus: Bool
+    let homeVM = HomeVM()
     var body: some View {
         TabView {
-            HomeView(viewModel: HomeVM())
+            HomeView(viewModel: homeVM)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
@@ -50,8 +52,11 @@ struct TabBarView: View {
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: Text("Search...")
             )
+            .focused($searchFocus)
             .onSubmit(of: .search) {
-                // viewModel.searchAction(text: searchText)
+                homeVM.searchAction(text: searchText)
+                searchFocus = false
+                searchText = ""
             }
         }
     }
