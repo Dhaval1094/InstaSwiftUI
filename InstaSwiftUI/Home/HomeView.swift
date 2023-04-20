@@ -43,24 +43,16 @@ struct HomeView: View {
                             }
                             .padding(2.5)
                         }
-                        .navigationTitle(APIClient.shared.searchString)
                     }
                     .refreshable {
                         viewModel.loadMore()
                     }
                 }
-                .searchable(
-                    text: $searchText,
-                    placement: .navigationBarDrawer(displayMode: .always),
-                    prompt: Text("Search...")
-                )
-                .onSubmit(of: .search) {
-                    viewModel.searchAction(text: searchText)
-                }
                 .onAppear {
                     viewModel.getSearchList()
                 }
             }
+            .padding(.top, 0.1)
         }
     }
 }

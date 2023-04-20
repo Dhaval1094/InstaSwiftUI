@@ -14,8 +14,8 @@ class HomeVM: ObservableObject {
     var lastPage = 0
     func getSearchList(page: Int = 1, perPage: Int = 40) {
         APIClient.shared.callSearch (
-            page: page, perPage:
-                perPage
+            page: page,
+            perPage: perPage
         ) { searchResponse, error in
             self.lastPage = page
             guard error == nil else {

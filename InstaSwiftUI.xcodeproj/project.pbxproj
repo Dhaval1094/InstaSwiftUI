@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		989A27AC29F0408E00E3FBC9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27AB29F0408E00E3FBC9 /* MainView.swift */; };
+		989A27AC29F0408E00E3FBC9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27AB29F0408E00E3FBC9 /* TabBarView.swift */; };
 		989A27AE29F04AF100E3FBC9 /* PlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27AD29F04AF100E3FBC9 /* PlaceHolderView.swift */; };
 		989A27B129F07E4C00E3FBC9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27B029F07E4C00E3FBC9 /* SettingsView.swift */; };
 		989A27B329F07E6600E3FBC9 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27B229F07E6600E3FBC9 /* SettingsVM.swift */; };
+		989A27BC29F1733B00E3FBC9 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27BA29F1733B00E3FBC9 /* ProfileVM.swift */; };
+		989A27BD29F1733B00E3FBC9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A27BB29F1733B00E3FBC9 /* ProfileView.swift */; };
 		98D76D9A29E9E33100BEBEDA /* InstaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */; };
 		98D76D9E29E9E33300BEBEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D76D9D29E9E33300BEBEDA /* Assets.xcassets */; };
 		98D76DA129E9E33300BEBEDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D76DA029E9E33300BEBEDA /* Preview Assets.xcassets */; };
-		98D76DAD29E9E3F600BEBEDA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DA729E9E3F500BEBEDA /* ProfileView.swift */; };
-		98D76DAE29E9E3F600BEBEDA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DA829E9E3F500BEBEDA /* Coordinator.swift */; };
 		98D76DAF29E9E3F600BEBEDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DA929E9E3F500BEBEDA /* Constants.swift */; };
-		98D76DB029E9E3F600BEBEDA /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DAA29E9E3F600BEBEDA /* RootCoordinator.swift */; };
 		98D76DB129E9E3F600BEBEDA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DAB29E9E3F600BEBEDA /* LoginView.swift */; };
 		98D76DB229E9E3F600BEBEDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DAC29E9E3F600BEBEDA /* HomeView.swift */; };
 		98D76DB429E9E8E000BEBEDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DB329E9E8E000BEBEDA /* SceneDelegate.swift */; };
 		98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DB629E9EE8F00BEBEDA /* LoginVM.swift */; };
 		98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DB929E9EEB000BEBEDA /* HomeVM.swift */; };
-		98D76DBD29E9EECD00BEBEDA /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DBC29E9EECD00BEBEDA /* ProfileVM.swift */; };
 		98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DDF29EAC48500BEBEDA /* APIClient.swift */; };
 		98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */; };
 		98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */; };
@@ -34,24 +32,22 @@
 		32C7ABCF027C72AF459F2200 /* Pods_InstaSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5290840D28C8856C11C3E750 /* Pods-InstaSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		60F0760570F8E3ACBD179657 /* Pods-InstaSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-InstaSwiftUI/Pods-InstaSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
-		989A27AB29F0408E00E3FBC9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		989A27AB29F0408E00E3FBC9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		989A27AD29F04AF100E3FBC9 /* PlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderView.swift; sourceTree = "<group>"; };
 		989A27B029F07E4C00E3FBC9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		989A27B229F07E6600E3FBC9 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
+		989A27BA29F1733B00E3FBC9 /* ProfileVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		989A27BB29F1733B00E3FBC9 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98D76D9629E9E33100BEBEDA /* InstaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSwiftUIApp.swift; sourceTree = "<group>"; };
 		98D76D9D29E9E33300BEBEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98D76DA029E9E33300BEBEDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		98D76DA729E9E3F500BEBEDA /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		98D76DA829E9E3F500BEBEDA /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		98D76DA929E9E3F500BEBEDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		98D76DAA29E9E3F600BEBEDA /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		98D76DAB29E9E3F600BEBEDA /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		98D76DAC29E9E3F600BEBEDA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		98D76DB329E9E8E000BEBEDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		98D76DB629E9EE8F00BEBEDA /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		98D76DB929E9EEB000BEBEDA /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
-		98D76DBC29E9EECD00BEBEDA /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		98D76DDF29EAC48500BEBEDA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		98D76DE129EAD0DA00BEBEDA /* APIRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRetry.swift; sourceTree = "<group>"; };
 		98D76DE629EAE09F00BEBEDA /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
@@ -89,7 +85,7 @@
 		989A27AA29F0407900E3FBC9 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				989A27AB29F0408E00E3FBC9 /* MainView.swift */,
+				989A27AB29F0408E00E3FBC9 /* TabBarView.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -101,6 +97,16 @@
 				989A27B229F07E6600E3FBC9 /* SettingsVM.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		989A27B929F1732A00E3FBC9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				989A27BB29F1733B00E3FBC9 /* ProfileView.swift */,
+				989A27BA29F1733B00E3FBC9 /* ProfileVM.swift */,
+			);
+			name = Profile;
+			path = Login/Profile;
 			sourceTree = "<group>";
 		};
 		98D76D8D29E9E33100BEBEDA = {
@@ -127,9 +133,9 @@
 				98D76D9929E9E33100BEBEDA /* InstaSwiftUIApp.swift */,
 				989A27AA29F0407900E3FBC9 /* Tabbar */,
 				98D76DDC29EAB19100BEBEDA /* Utility */,
+				989A27B929F1732A00E3FBC9 /* Profile */,
 				98D76DB829E9EE9500BEBEDA /* Login */,
 				98D76DBB29E9EEB600BEBEDA /* Home */,
-				98D76DBE29E9EED200BEBEDA /* Profile */,
 				989A27AF29F07E1E00E3FBC9 /* Settings */,
 				98D76DE329EAD3D000BEBEDA /* Response */,
 				98D76DB529E9EA8500BEBEDA /* NavigationComponent */,
@@ -151,8 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				98D76DB329E9E8E000BEBEDA /* SceneDelegate.swift */,
-				98D76DA829E9E3F500BEBEDA /* Coordinator.swift */,
-				98D76DAA29E9E3F600BEBEDA /* RootCoordinator.swift */,
 			);
 			name = NavigationComponent;
 			sourceTree = "<group>";
@@ -174,15 +178,6 @@
 				989A27AD29F04AF100E3FBC9 /* PlaceHolderView.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		98D76DBE29E9EED200BEBEDA /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				98D76DA729E9E3F500BEBEDA /* ProfileView.swift */,
-				98D76DBC29E9EECD00BEBEDA /* ProfileVM.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		98D76DDC29EAB19100BEBEDA /* Utility */ = {
@@ -322,23 +317,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D76DAF29E9E3F600BEBEDA /* Constants.swift in Sources */,
-				989A27AC29F0408E00E3FBC9 /* MainView.swift in Sources */,
+				989A27AC29F0408E00E3FBC9 /* TabBarView.swift in Sources */,
 				98D76DBA29E9EEB000BEBEDA /* HomeVM.swift in Sources */,
 				98D76DB129E9E3F600BEBEDA /* LoginView.swift in Sources */,
 				98D76DE729EAE09F00BEBEDA /* SearchResponse.swift in Sources */,
 				989A27B129F07E4C00E3FBC9 /* SettingsView.swift in Sources */,
-				98D76DAE29E9E3F600BEBEDA /* Coordinator.swift in Sources */,
-				98D76DAD29E9E3F600BEBEDA /* ProfileView.swift in Sources */,
 				98D76DB229E9E3F600BEBEDA /* HomeView.swift in Sources */,
-				98D76DBD29E9EECD00BEBEDA /* ProfileVM.swift in Sources */,
 				98D76DB729E9EE9000BEBEDA /* LoginVM.swift in Sources */,
 				98D76DE229EAD0DA00BEBEDA /* APIRetry.swift in Sources */,
+				989A27BD29F1733B00E3FBC9 /* ProfileView.swift in Sources */,
 				98D76DE029EAC48500BEBEDA /* APIClient.swift in Sources */,
-				98D76DB029E9E3F600BEBEDA /* RootCoordinator.swift in Sources */,
 				98D76D9A29E9E33100BEBEDA /* InstaSwiftUIApp.swift in Sources */,
 				989A27AE29F04AF100E3FBC9 /* PlaceHolderView.swift in Sources */,
 				98D76DB429E9E8E000BEBEDA /* SceneDelegate.swift in Sources */,
 				989A27B329F07E6600E3FBC9 /* SettingsVM.swift in Sources */,
+				989A27BC29F1733B00E3FBC9 /* ProfileVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

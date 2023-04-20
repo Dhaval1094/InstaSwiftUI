@@ -117,7 +117,7 @@ struct LoginView: View {
                             }
                         }
                         .navigationDestination(isPresented: $isSignIn) {
-                            MainView()                            
+                            TabBarView()
                         }
                         .padding(.bottom, 50)
                     Spacer()

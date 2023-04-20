@@ -10,7 +10,6 @@ import SwiftUI
 class SceneDelegate: NSObject, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    let rootCoordinator: RootCoordinator = RootCoordinator()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -18,7 +17,6 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        rootCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
