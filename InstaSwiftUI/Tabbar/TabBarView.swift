@@ -22,7 +22,7 @@ struct TabBarView: View {
                     isNavigationBarHidden = false
                 }
                 .tag(0)
-            ProfileView()
+            ProfileView(viewModel: ProfileVM())
                 .tabItem {
                     Label("Profile", systemImage: "person.text.rectangle")
                 }
