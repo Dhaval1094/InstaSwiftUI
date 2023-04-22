@@ -10,7 +10,7 @@ import SwiftUI
 class ProfileVM: ObservableObject {
     let borderColor = LinearGradient(
         gradient: Gradient(
-            colors: [ .red, .pink, .orange, .red, .purple ]
+            colors: [ .red, .orange, .pink, .red, .purple ]
         ),
         startPoint: .leading,
         endPoint: .trailing

@@ -11,7 +11,7 @@ import SwiftUI
 struct InstaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginVM())
+            ProfileView(viewModel: ProfileVM())
         }
     }
 }
